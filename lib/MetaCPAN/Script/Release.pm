@@ -208,8 +208,6 @@ sub _get_release_model {
         distinfo => $d,
         file     => $archive_path,
         index    => $self->index,
-        level    => $self->level,
-        logger   => $self->logger,
         status   => $self->detect_status( $d->cpanid, $d->filename ),
     );
 
