@@ -343,7 +343,7 @@ sub find_download_url {
 
     my @checksums;
 
-    my $hit = $res->{hits}{hits}[0];
+    my $hit     = $res->{hits}{hits}[0];
     my $release = exists $hit->{_source} ? $hit->{_source}{release} : undef;
 
     if ($release) {
@@ -355,8 +355,8 @@ sub find_download_url {
                 : ()
             ),
             (
-                $checksums->{checksum_sha1}
-                ? ( checksum_sha1 => $checksums->{checksum_sha1} )
+                $checksums->{checksum_sha256}
+                ? ( checksum_sha256 => $checksums->{checksum_sha256} )
                 : ()
             ),
         );

@@ -146,7 +146,7 @@ has download_url => (
     builder => '_build_download_url',
 );
 
-has [qw(checksum_md5 checksum_sha1)] => (
+has [qw(checksum_md5 checksum_sha256)] => (
     is  => 'ro',
     isa => Str,
 );

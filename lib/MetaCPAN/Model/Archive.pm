@@ -80,14 +80,14 @@ has file_digest_md5 => (
     },
 );
 
-# SHA1 digest for the archive file
-has file_digest_sha1 => (
+# SHA256 digest for the archive file
+has file_digest_sha256 => (
     is      => 'ro',
     isa     => Str,
     lazy    => 1,
     default => sub {
         my $self = shift;
-        digest_file_hex( $self->file, "SHA1" );
+        digest_file_hex( $self->file, "SHA" );
     },
 );
 

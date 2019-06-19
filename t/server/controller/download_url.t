@@ -69,7 +69,7 @@ my @tests = (
 );
 
 for (@tests) {
-    my ( $title, $url, $status, $version, $checksum_md5, $checksum_sha1 )
+    my ( $title, $url, $status, $version, $checksum_md5, $checksum_sha256 )
         = @$_;
 
     subtest $title => sub {
@@ -100,9 +100,10 @@ for (@tests) {
             is( $content->{checksum_md5},
                 $checksum_md5, "correct checksum_md5 ($checksum_md5)" );
         }
-        if ($checksum_sha1) {
-            is( $content->{checksum_sha1},
-                $checksum_sha1, "correct checksum_sha1 ($checksum_sha1)" );
+        if ($checksum_sha256) {
+            is( $content->{checksum_sha256},
+                $checksum_sha256,
+                "correct checksum_sha256 ($checksum_sha256)" );
         }
     };
 }

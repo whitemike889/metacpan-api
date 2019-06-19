@@ -45,7 +45,7 @@ sub mapping {
               "index" : "not_analyzed",
               "type" : "string"
            },
-           "checksum_sha1" : {
+           "checksum_sha256" : {
               "ignore_above" : 2048,
               "index" : "not_analyzed",
               "type" : "string"

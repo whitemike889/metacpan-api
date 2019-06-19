@@ -265,7 +265,7 @@ sub get_checksums {
         body  => {
             query   => $query,
             size    => 1,
-            _source => [qw< checksum_md5 checksum_sha1 >],
+            _source => [qw< checksum_md5 checksum_sha256 >],
         }
     );
 
